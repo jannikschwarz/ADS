@@ -4,6 +4,10 @@ public class CalculatorVisitor implements Visitor, Calculator {
 
 	private LinkedStack<Token> tokenStack;
 
+	public CalculatorVisitor(){
+		tokenStack = new LinkedStack<>();
+	}
+
 	private void pushOperand(Operand operand) {
 		tokenStack.push(operand);
 	}
