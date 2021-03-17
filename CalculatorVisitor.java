@@ -1,10 +1,6 @@
-public class CalculatorVisitor extends Operand implements Visitor, Calculator {
+public class CalculatorVisitor implements Visitor, Calculator {
 
 	private LinkedStack<Token> tokenStack;
-
-	private MalformedExpressionException malformedExpressionException;
-
-	private LinkedList linkedList;
 
 	private LinkedStack linkedStack;
 
@@ -16,26 +12,15 @@ public class CalculatorVisitor extends Operand implements Visitor, Calculator {
 
 	}
 
-
-	/**
-	 * @see Visitor#visit(Operand)
-	 */
 	public void visit(Operand operand) {
 
 	}
 
 
-	/**
-	 * @see Visitor#visit(Operator)
-	 */
 	public void visit(Operator operator) {
 
 	}
 
-
-	/**
-	 * @see Calculator#getResult()
-	 */
 	public int getResult() {
 		return 0;
 	}

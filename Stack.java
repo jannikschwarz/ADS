@@ -1,9 +1,9 @@
-public interface Stack<T> extends List {
+public interface Stack<T> {
 
-	public abstract boolean isEmpty();
+	boolean isEmpty();
 
-	public abstract void push(T elm);
+	void push(T elm);
 
-	public abstract T pop();
+	T pop();
 
 }

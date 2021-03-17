@@ -1,7 +1,7 @@
 public interface Visitor {
 
-	public abstract void visit(Operand operand);
+	void visit(Operand operand);
 
-	public abstract void visit(Operator operator);
+	void visit(Operator operator);
 
 }

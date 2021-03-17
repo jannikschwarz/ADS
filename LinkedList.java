@@ -1,4 +1,4 @@
-public class LinkedList<T> implements List {
+public class LinkedList<T> implements List<T> {
 
 	private Node head;
 

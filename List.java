@@ -1,15 +1,10 @@
 public interface List<T> {
 
-	private EmptyStackException emptyStackException;
+	boolean isEmpty();
 
-	private EmptyListException emptyListException;
+	int size();
 
-	public abstract boolean isEmpty();
+	void addToFront(T data);
 
-	public abstract int size();
-
-	public abstract void addToFront(T data);
-
-	public abstract T removeFirst();
-
+	T removeFirst();
 }
