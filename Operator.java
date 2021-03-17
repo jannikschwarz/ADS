@@ -2,8 +2,6 @@ public class Operator extends Token {
 
 	private Operation operation;
 
-	private Operation operation;
-
 	public void accept(CalculatorVisitor visitor) {
 
 	}
