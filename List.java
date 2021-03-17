@@ -6,5 +6,5 @@ public interface List<T> {
 
 	void addToFront(T data);
 
-	T removeFirst();
+	T removeFirst() throws EmptyListException;
 }

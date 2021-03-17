@@ -1,41 +1,38 @@
 public class LinkedList<T> implements List<T> {
 
-	private Node head;
+	private Node<T> head;
 
 	private int size;
 
-	private Node node;
 
 
-	/**
-	 * @see List#isEmpty()
-	 */
 	public boolean isEmpty() {
-		return false;
+		if(size == 0){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
-
-	/**
-	 * @see List#size()
-	 */
 	public int size() {
-		return 0;
+		return size;
 	}
 
 
-	/**
-	 * @see List#addToFront(T)
-	 */
 	public void addToFront(T data) {
-
+		Node<T> newNode = new Node<T>(data);
+		newNode.setNext(head);
+		head = newNode;
+		size++;
 	}
 
-
-	/**
-	 * @see List#removeFirst()
-	 */
-	public T removeFirst() {
-		return null;
+	public T removeFirst() throws EmptyListException {
+		if(head == null){
+			throw new EmptyListException("List is empty");
+		}
+		Node<T> temp = head;
+		head = temp.getNext();
+		size--;
+		return temp.getData();
 	}
-
 }
